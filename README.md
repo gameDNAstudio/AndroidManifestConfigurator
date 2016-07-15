@@ -25,7 +25,7 @@ Enable *Android Manifest Configurator* in *Edit -> Plugins -> Misc -> Android Ma
 
 ![EnablePlugin](Resources/EnablePlugin.png)
 
-Go to *Project Settings -> Plugins -> Android Manifest Configurator and change properties as you want. More info about *Filters on Google Play* you can find on [official Android docs](https://developer.android.com/google/play/filters.html).
+Go to *Project Settings -> Plugins -> Android Manifest Configurator* and change properties as you want. More info about *Filters on Google Play* you can find on [official Android docs](https://developer.android.com/google/play/filters.html).
 
 ![Settings](Resources/Settings.png)
 
