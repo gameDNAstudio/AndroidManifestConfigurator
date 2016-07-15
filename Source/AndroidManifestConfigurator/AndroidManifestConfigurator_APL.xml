@@ -1,0 +1,1061 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+    Android Manifest Configurator
+    Created by Patryk Stepniewski
+    Copyright (c) 2014-2016 gameDNA studio. All Rights Reserved.
+-->
+<root xmlns:android="http://schemas.android.com/apk/res/android">
+  <init>
+	<log text="AndroidManifestConfigurator init"/>
+	<setStringFromProperty result="TexturesCompression" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="TexturesCompression" default="Default"/>
+	<setStringFromProperty result="bOpenGLAEP" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bOpenGLAEP" default="Default"/>
+	<setBoolFromProperty result="bSmallScreens" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bSmallScreens" default="true"/>
+	<setBoolFromProperty result="bNormalScreens" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bNormalScreens" default="true"/>
+	<setBoolFromProperty result="bLargeScreens" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bLargeScreens" default="true"/>
+	<setBoolFromProperty result="bXLargeScreens" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bXLargeScreens" default="true"/>
+	<setBoolFromProperty result="bAnyDensity" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bAnyDensity" default="true"/>
+	<setBoolFromProperty result="bReqFiveWayNav" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bReqFiveWayNav" default="false"/>
+	<setBoolFromProperty result="bReqHardKeyboard" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bReqHardKeyboard" default="false"/>
+	<setStringFromProperty result="ReqKeyboardType" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="ReqKeyboardType" default="undefined"/>
+	<setStringFromProperty result="ReqNavigationType" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="ReqNavigationType" default="undefined"/>
+	<setStringFromProperty result="ReqTouchScreen" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="ReqTouchScreen" default="undefined"/>
+	<setStringFromProperty result="bAudioLowLatency" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bAudioLowLatency" default="Default"/>
+	<setStringFromProperty result="bAudioOutput" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bAudioOutput" default="Default"/>
+	<setStringFromProperty result="bAudioPro" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bAudioPro" default="Default"/>
+	<setStringFromProperty result="bAudioMicrophone" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bAudioMicrophone" default="Default"/>
+	<setStringFromProperty result="bBluetooth" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bBluetooth" default="Default"/>
+	<setStringFromProperty result="bBluetoothLe" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bBluetoothLe" default="Default"/>
+	<setStringFromProperty result="bCamera" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bCamera" default="Default"/>
+	<setStringFromProperty result="bCameraAny" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bCameraAny" default="Default"/>
+	<setStringFromProperty result="bCameraAutofocus" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bCameraAutofocus" default="Default"/>
+	<setStringFromProperty result="bCameraPostProcessing" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bCameraPostProcessing" default="Default"/>
+	<setStringFromProperty result="bCameraManualSensor" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bCameraManualSensor" default="Default"/>
+	<setStringFromProperty result="bCameraRaw" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bCameraRaw" default="Default"/>
+	<setStringFromProperty result="bCameraExternal" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bCameraExternal" default="Default"/>
+	<setStringFromProperty result="bCameraFlash" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bCameraFlash" default="Default"/>
+	<setStringFromProperty result="bCameraFront" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bCameraFront" default="Default"/>
+	<setStringFromProperty result="bCameraFull" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bCameraFull" default="Default"/>
+	<setStringFromProperty result="bHardwareTypeAutomotive" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bHardwareTypeAutomotive" default="Default"/>
+	<setStringFromProperty result="bHardwareTypeTelevision" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bHardwareTypeTelevision" default="Default"/>
+	<setStringFromProperty result="bHardwareTypeWatch" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bHardwareTypeWatch" default="Default"/>
+	<setStringFromProperty result="bFingerprint" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bFingerprint" default="Default"/>
+	<setStringFromProperty result="bGamepad" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bGamepad" default="Default"/>
+	<setStringFromProperty result="bConsumerIR" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bConsumerIR" default="Default"/>
+	<setStringFromProperty result="bLocation" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bLocation" default="Default"/>
+	<setStringFromProperty result="bLocationGPS" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bLocationGPS" default="Default"/>
+	<setStringFromProperty result="bLocationNetwork" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bLocationNetwork" default="Default"/>
+	<setStringFromProperty result="bNFC" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bNFC" default="Default"/>
+	<setStringFromProperty result="bSensorAccelerometer" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bSensorAccelerometer" default="Default"/>
+	<setStringFromProperty result="bSensorAmbientTemperature" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bSensorAmbientTemperature" default="Default"/>
+	<setStringFromProperty result="bSensorBarometer" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bSensorBarometer" default="Default"/>
+	<setStringFromProperty result="bSensorCompass" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bSensorCompass" default="Default"/>
+	<setStringFromProperty result="bSensorGyroscope" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bSensorGyroscope" default="Default"/>
+	<setStringFromProperty result="bSensorHifi" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bSensorHifi" default="Default"/>
+	<setStringFromProperty result="bSensorHeartrate" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bSensorHeartrate" default="Default"/>
+	<setStringFromProperty result="bSensorHeartrateECG" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bSensorHeartrateECG" default="Default"/>
+	<setStringFromProperty result="bSensorLight" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bSensorLight" default="Default"/>
+	<setStringFromProperty result="bSensorProximity" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bSensorProximity" default="Default"/>
+	<setStringFromProperty result="bSensorRelativeHumidity" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bSensorRelativeHumidity" default="Default"/>
+	<setStringFromProperty result="bSensorStepCounter" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bSensorStepCounter" default="Default"/>
+	<setStringFromProperty result="bSensorStepDetector" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bSensorStepDetector" default="Default"/>
+	<setStringFromProperty result="bTelephony" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bTelephony" default="Default"/>
+	<setStringFromProperty result="bTelephonyCDMA" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bTelephonyCDMA" default="Default"/>
+	<setStringFromProperty result="bTelephonyGSM" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bTelephonyGSM" default="Default"/>
+	<setStringFromProperty result="bFakeTouch" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bFakeTouch" default="Default"/>
+	<setStringFromProperty result="bFakeTouchMultiTouchDistinct" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bFakeTouchMultiTouchDistinct" default="Default"/>
+	<setStringFromProperty result="bFakeTouchMultiTouchJazzhand" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bFakeTouchMultiTouchJazzhand" default="Default"/>
+	<setStringFromProperty result="bTouchscreen" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bTouchscreen" default="Default"/>
+	<setStringFromProperty result="bTouchscreenMultitouch" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bTouchscreenMultitouch" default="Default"/>
+	<setStringFromProperty result="bTouchscreenMultitouchDistinct" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bTouchscreenMultitouchDistinct" default="Default"/>
+	<setStringFromProperty result="bTouchscreenMultitouchJazzhand" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bTouchscreenMultitouchJazzhand" default="Default"/>
+	<setStringFromProperty result="bUSBAccessory" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bUSBAccessory" default="Default"/>
+	<setStringFromProperty result="bUSBHost" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bUSBHost" default="Default"/>
+	<setStringFromProperty result="bWiFi" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bWiFi" default="Default"/>
+	<setStringFromProperty result="bWiFiDirect" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bWiFiDirect" default="Default"/>
+	<setStringFromProperty result="bSoftwareSip" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bSoftwareSip" default="Default"/>
+	<setStringFromProperty result="bSoftwareSipVoIP" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bSoftwareSipVoIP" default="Default"/>
+	<setStringFromProperty result="bSoftwareWebview" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bSoftwareWebview" default="Default"/>
+	<setStringFromProperty result="bSoftwareInputMethods" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bSoftwareInputMethods" default="Default"/>
+	<setStringFromProperty result="bSoftwareBackup" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bSoftwareBackup" default="Default"/>
+	<setStringFromProperty result="bSoftwareDeviceAdmin" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bSoftwareDeviceAdmin" default="Default"/>
+	<setStringFromProperty result="bSoftwareManagedUsers" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bSoftwareManagedUsers" default="Default"/>
+	<setStringFromProperty result="bSoftwareSecurelyRemovesUsers" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bSoftwareSecurelyRemovesUsers" default="Default"/>
+	<setStringFromProperty result="bSoftwareVerifiedBoot" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bSoftwareVerifiedBoot" default="Default"/>
+	<setStringFromProperty result="bSoftwareMidi" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bSoftwareMidi" default="Default"/>
+	<setStringFromProperty result="bSoftwarePrint" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bSoftwarePrint" default="Default"/>
+	<setStringFromProperty result="bSoftwareLeanback" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bSoftwareLeanback" default="Default"/>
+	<setStringFromProperty result="bSoftwareLiveTV" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bSoftwareLiveTV" default="Default"/>
+	<setStringFromProperty result="bSoftwareAppWidgets" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bSoftwareAppWidgets" default="Default"/>
+	<setStringFromProperty result="bSoftwareHomeScreen" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bSoftwareHomeScreen" default="Default"/>
+	<setStringFromProperty result="bSoftwareLiveWallpaper" ini="Engine" section="/Script/AndroidManifestConfigurator.AndroidManifestConfiguratorSettings" property="bSoftwareLiveWallpaper" default="Default"/>
+  </init>
+
+  <androidManifestUpdates>
+	<!-- Textures -->
+	<setBoolIsEqual result="bETC1Enabled" arg1="$S(TexturesCompression)" arg2="ETC1"/>
+	<setBoolIsEqual result="bETC2Enabled" arg1="$S(TexturesCompression)" arg2="ETC2"/>
+	<setBoolIsEqual result="bATCEnabled" arg1="$S(TexturesCompression)" arg2="ATC"/>
+	<setBoolIsEqual result="bDXTEnabled" arg1="$S(TexturesCompression)" arg2="DXT"/>
+	<setBoolIsEqual result="bPVRTCEnabled" arg1="$S(TexturesCompression)" arg2="PVRTC"/>
+	<setBoolIsEqual result="bASTCEnabled" arg1="$S(TexturesCompression)" arg2="ASTC"/>
+	<if condition="bETC1Enabled">
+	  <true>
+		<addElements tag="manifest">
+			<supports-gl-texture android:name="GL_OES_compressed_ETC1_RGB8_texture" />
+		</addElements>
+	  </true>
+	</if>
+	<if condition="bETC2Enabled">
+	  <true>
+		<addElements tag="manifest">
+			<supports-gl-texture android:name="GL_COMPRESSED_RGBA8_ETC2_EAC" />
+		</addElements>
+	  </true>
+	</if>
+	<if condition="bATCEnabled">
+	  <true>
+		<addElements tag="manifest">
+			<supports-gl-texture android:name="GL_AMD_compressed_ATC_texture" />
+		</addElements>
+	  </true>
+	</if>
+	<if condition="bDXTEnabled">
+	  <true>
+		<addElements tag="manifest">
+			<supports-gl-texture android:name="GL_EXT_texture_compression_dxt1" />
+		</addElements>
+	  </true>
+	</if>
+	<if condition="bPVRTCEnabled">
+	  <true>
+		<addElements tag="manifest">
+			<supports-gl-texture android:name="GL_IMG_texture_compression_pvrtc" />
+		</addElements>
+	  </true>
+	</if>
+	<if condition="bASTCEnabled">
+	  <true>
+		<addElements tag="manifest">
+			<supports-gl-texture android:name="GL_OES_texture_compression_ASTC" />
+		</addElements>
+	  </true>
+	</if>
+	
+	<!-- OpenGL -->
+	<setBoolIsEqual result="bOpenGLAEPRequired" arg1="$S(bOpenGLAEP)" arg2="Required"/>
+	<setBoolIsEqual result="bOpenGLAEPNotRequired" arg1="$S(bOpenGLAEP)" arg2="NotRequired"/>
+	<if condition="bOpenGLAEPRequired">
+	  <true>
+		<addFeature android:name="android.hardware.opengles.aep" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bOpenGLAEPNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.opengles.aep" android:required="false"/>
+	  </true>
+	</if>
+	  
+	<!-- Screens -->
+	<addElements tag="manifest">
+		<supports-screens />
+	</addElements>
+	<if condition="bSmallScreens">
+	  <false>
+		<addAttribute tag="supports-screens" name="android:smallScreens" value="$B(bSmallScreens)"/>
+	  </false>
+	</if>
+	<if condition="bNormalScreens">
+	  <false>
+		<addAttribute tag="supports-screens" name="android:normalScreens" value="$B(bNormalScreens)"/>
+	  </false>
+	</if>
+	<if condition="bLargeScreens">
+	  <false>
+		<addAttribute tag="supports-screens" name="android:largeScreens" value="$B(bLargeScreens)"/>
+	  </false>
+	</if>
+	<if condition="bXLargeScreens">
+	  <false>
+		<addAttribute tag="supports-screens" name="android:xlargeScreens" value="$B(bXLargeScreens)"/>
+	  </false>
+	</if>
+	<if condition="bAnyDensity">
+	  <false>
+		  <addAttribute tag="supports-screens" name="android:anyDensity" value="$B(bAnyDensity)"/>
+	  </false>
+	</if>
+	
+	<!-- Input -->
+	<addElements tag="manifest">
+		<uses-configuration />
+	</addElements>
+	<if condition="bReqFiveWayNav">
+	  <true>
+		  <addAttribute tag="uses-configuration" name="android:reqFiveWayNav" value="$B(bReqFiveWayNav)"/>
+	  </true>
+	</if>
+	<if condition="bReqHardKeyboard">
+	  <true>
+		<addAttribute tag="uses-configuration" name="android:reqHardKeyboard" value="$B(bReqHardKeyboard)"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bReqKeyboardTypeUndefined" arg1="$S(ReqKeyboardType)" arg2="undefined"/>
+	<setBoolIsEqual result="bReqKeyboardTypeNull" arg1="$S(ReqKeyboardType)" arg2=""/>
+	<setBoolOr result="bReqKeyboardTypeProvided" arg1="$B(bReqKeyboardTypeUndefined)" arg2="$B(bReqKeyboardTypeNull)"/>
+	<if condition="bReqKeyboardTypeProvided">
+	  <false>
+			<addAttribute tag="uses-configuration" name="android:reqKeyboardType" value="$S(ReqKeyboardType)"/>
+	  </false>
+	</if>
+	<setBoolIsEqual result="bReqNavigationTypeUndefined" arg1="$S(ReqNavigationType)" arg2="undefined"/>
+	<setBoolIsEqual result="bReqNavigationTypeNull" arg1="$S(ReqNavigationType)" arg2=""/>
+	<setBoolOr result="bReqNavigationTypeProvided" arg1="$B(bReqNavigationTypeUndefined)" arg2="$B(bReqNavigationTypeNull)"/>	  
+	<if condition="bReqNavigationTypeProvided">
+	  <false>
+			<addAttribute tag="uses-configuration" name="android:reqNavigation" value="$S(ReqNavigationType)"/>
+	  </false>
+	</if>	
+	<setBoolIsEqual result="bReqTouchScreenUndefined" arg1="$S(ReqTouchScreen)" arg2="undefined"/>
+	<setBoolIsEqual result="bReqTouchScreenNull" arg1="$S(ReqTouchScreen)" arg2=""/>
+	<setBoolOr result="bReqTouchScreenProvided" arg1="$B(bReqTouchScreenUndefined)" arg2="$B(bReqTouchScreenNull)"/>
+	<if condition="bReqTouchScreenProvided">
+	  <false>
+			<addAttribute tag="uses-configuration" name="android:reqTouchScreen" value="$S(ReqTouchScreen)"/>
+	  </false>
+	</if>
+  
+	<!-- Features -->
+	<setBoolIsEqual result="bAudioLowLatencyRequired" arg1="$S(bAudioLowLatency)" arg2="Required"/>
+	<setBoolIsEqual result="bAudioLowLatencyNotRequired" arg1="$S(bAudioLowLatency)" arg2="NotRequired"/>
+	<if condition="bAudioLowLatencyRequired">
+	  <true>
+		<addFeature android:name="android.hardware.audio.low_latency" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bAudioLowLatencyNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.audio.low_latency" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bAudioOutputRequired" arg1="$S(bAudioOutput)" arg2="Required"/>
+	<setBoolIsEqual result="bAudioOutputNotRequired" arg1="$S(bAudioOutput)" arg2="NotRequired"/>
+	<if condition="bAudioOutputRequired">
+	  <true>
+		<addFeature android:name="android.hardware.audio.output" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bAudioOutputNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.audio.output" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bAudioProRequired" arg1="$S(bAudioPro)" arg2="Required"/>
+	<setBoolIsEqual result="bAudioProNotRequired" arg1="$S(bAudioPro)" arg2="NotRequired"/>
+	<if condition="bAudioProRequired">
+	  <true>
+		<addFeature android:name="android.hardware.audio.pro" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bAudioProNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.audio.pro" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bAudioMicrophoneRequired" arg1="$S(bAudioMicrophone)" arg2="Required"/>
+	<setBoolIsEqual result="bAudioMicrophoneNotRequired" arg1="$S(bAudioMicrophone)" arg2="NotRequired"/>
+	<if condition="bAudioMicrophoneRequired">
+	  <true>
+		<addFeature android:name="android.hardware.microphone" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bAudioMicrophoneNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.microphone" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bBluetoothRequired" arg1="$S(bBluetooth)" arg2="Required"/>
+	<setBoolIsEqual result="bBluetoothNotRequired" arg1="$S(bBluetooth)" arg2="NotRequired"/>
+	<if condition="bBluetoothRequired">
+	  <true>
+		<addFeature android:name="android.hardware.bluetooth" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bBluetoothNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.bluetooth" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bBluetoothLeRequired" arg1="$S(bBluetoothLe)" arg2="Required"/>
+	<setBoolIsEqual result="bBluetoothLeNotRequired" arg1="$S(bBluetoothLe)" arg2="NotRequired"/>
+	<if condition="bBluetoothLeRequired">
+	  <true>
+		<addFeature android:name="android.hardware.bluetooth_le" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bBluetoothLeNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.bluetooth_le" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bCameraRequired" arg1="$S(bCamera)" arg2="Required"/>
+	<setBoolIsEqual result="bCameraNotRequired" arg1="$S(bCamera)" arg2="NotRequired"/>
+	<if condition="bCameraRequired">
+	  <true>
+		<addFeature android:name="android.hardware.camera" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bCameraNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.camera" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bCameraAnyRequired" arg1="$S(bCameraAny)" arg2="Required"/>
+	<setBoolIsEqual result="bCameraAnyNotRequired" arg1="$S(bCameraAny)" arg2="NotRequired"/>
+	<if condition="bCameraAnyRequired">
+	  <true>
+		<addFeature android:name="android.hardware.camera.any" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bCameraAnyNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.camera.any" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bCameraAutofocusRequired" arg1="$S(bCameraAutofocus)" arg2="Required"/>
+	<setBoolIsEqual result="bCameraAutofocusNotRequired" arg1="$S(bCameraAutofocus)" arg2="NotRequired"/>
+	<if condition="bCameraAutofocusRequired">
+	  <true>
+		<addFeature android:name="android.hardware.camera.autofocus" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bCameraAutofocusNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.camera.autofocus" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bCameraPostProcessingRequired" arg1="$S(bCameraPostProcessing)" arg2="Required"/>
+	<setBoolIsEqual result="bCameraPostProcessingNotRequired" arg1="$S(bCameraPostProcessing)" arg2="NotRequired"/>
+	<if condition="bCameraPostProcessingRequired">
+	  <true>
+		<addFeature android:name="android.hardware.camera.capability.manual_post_processing" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bCameraPostProcessingNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.camera.capability.manual_post_processing" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bCameraManualSensorRequired" arg1="$S(bCameraManualSensor)" arg2="Required"/>
+	<setBoolIsEqual result="bCameraManualSensorNotRequired" arg1="$S(bCameraManualSensor)" arg2="NotRequired"/>
+	<if condition="bCameraManualSensorRequired">
+	  <true>
+		<addFeature android:name="android.hardware.camera.capability.manual_sensor" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bCameraManualSensorNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.camera.capability.manual_sensor" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bCameraRawRequired" arg1="$S(bCameraRaw)" arg2="Required"/>
+	<setBoolIsEqual result="bCameraRawNotRequired" arg1="$S(bCameraRaw)" arg2="NotRequired"/>
+	<if condition="bCameraRawRequired">
+	  <true>
+		<addFeature android:name="android.hardware.camera.capability.raw" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bCameraRawNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.camera.capability.raw" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bCameraExternalRequired" arg1="$S(bCameraExternal)" arg2="Required"/>
+	<setBoolIsEqual result="bCameraExternalNotRequired" arg1="$S(bCameraExternal)" arg2="NotRequired"/>
+	<if condition="bCameraExternalRequired">
+	  <true>
+		<addFeature android:name="android.hardware.camera.external" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bCameraExternalNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.camera.external" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bCameraFlashRequired" arg1="$S(bCameraFlash)" arg2="Required"/>
+	<setBoolIsEqual result="bCameraFlashNotRequired" arg1="$S(bCameraFlash)" arg2="NotRequired"/>
+	<if condition="bCameraFlashRequired">
+	  <true>
+		<addFeature android:name="android.hardware.camera.flash" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bCameraFlashNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.camera.flash" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bCameraFrontRequired" arg1="$S(bCameraFront)" arg2="Required"/>
+	<setBoolIsEqual result="bCameraFrontNotRequired" arg1="$S(bCameraFront)" arg2="NotRequired"/>
+	<if condition="bCameraFrontRequired">
+	  <true>
+		<addFeature android:name="android.hardware.camera.front" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bCameraFrontNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.camera.front" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bCameraFullRequired" arg1="$S(bCameraFull)" arg2="Required"/>
+	<setBoolIsEqual result="bCameraFullNotRequired" arg1="$S(bCameraFull)" arg2="NotRequired"/>
+	<if condition="bCameraFullRequired">
+	  <true>
+		<addFeature android:name="android.hardware.camera.level.full" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bCameraFullNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.camera.level.full" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bHardwareTypeAutomotiveRequired" arg1="$S(bHardwareTypeAutomotive)" arg2="Required"/>
+	<setBoolIsEqual result="bHardwareTypeAutomotiveNotRequired" arg1="$S(bHardwareTypeAutomotive)" arg2="NotRequired"/>
+	<if condition="bHardwareTypeAutomotiveRequired">
+	  <true>
+		<addFeature android:name="android.hardware.type.automotive" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bHardwareTypeAutomotiveNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.type.automotive" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bHardwareTypeTelevisionRequired" arg1="$S(bHardwareTypeTelevision)" arg2="Required"/>
+	<setBoolIsEqual result="bHardwareTypeTelevisionNotRequired" arg1="$S(bHardwareTypeTelevision)" arg2="NotRequired"/>
+	<if condition="bHardwareTypeTelevisionRequired">
+	  <true>
+		<addFeature android:name="android.hardware.type.television" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bHardwareTypeTelevisionNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.type.television" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bHardwareTypeWatchRequired" arg1="$S(bHardwareTypeWatch)" arg2="Required"/>
+	<setBoolIsEqual result="bHardwareTypeWatchNotRequired" arg1="$S(bHardwareTypeWatch)" arg2="NotRequired"/>
+	<if condition="bHardwareTypeWatchRequired">
+	  <true>
+		<addFeature android:name="android.hardware.type.watch" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bHardwareTypeWatchNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.type.watch" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bFingerprintRequired" arg1="$S(bFingerprint)" arg2="Required"/>
+	<setBoolIsEqual result="bFingerprintNotRequired" arg1="$S(bFingerprint)" arg2="NotRequired"/>
+	<if condition="bFingerprintRequired">
+	  <true>
+		<addFeature android:name="android.hardware.fingerprint" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bFingerprintNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.fingerprint" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bGamepadRequired" arg1="$S(bGamepad)" arg2="Required"/>
+	<setBoolIsEqual result="bGamepadNotRequired" arg1="$S(bGamepad)" arg2="NotRequired"/>
+	<if condition="bGamepadRequired">
+	  <true>
+		<addFeature android:name="android.hardware.gamepad" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bGamepadNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.gamepad" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bConsumerIRRequired" arg1="$S(bConsumerIR)" arg2="Required"/>
+	<setBoolIsEqual result="bConsumerIRNotRequired" arg1="$S(bConsumerIR)" arg2="NotRequired"/>
+	<if condition="bConsumerIRRequired">
+	  <true>
+		<addFeature android:name="android.hardware.consumerir" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bConsumerIRNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.consumerir" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bLocationRequired" arg1="$S(bLocation)" arg2="Required"/>
+	<setBoolIsEqual result="bLocationNotRequired" arg1="$S(bLocation)" arg2="NotRequired"/>
+	<if condition="bLocationRequired">
+	  <true>
+		<addFeature android:name="android.hardware.location" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bLocationNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.location" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bLocationGPSRequired" arg1="$S(bLocationGPS)" arg2="Required"/>
+	<setBoolIsEqual result="bLocationGPSNotRequired" arg1="$S(bLocationGPS)" arg2="NotRequired"/>
+	<if condition="bLocationGPSRequired">
+	  <true>
+		<addFeature android:name="android.hardware.location.gps" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bLocationGPSNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.location.gps" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bLocationNetworkRequired" arg1="$S(bLocationNetwork)" arg2="Required"/>
+	<setBoolIsEqual result="bLocationNetworkNotRequired" arg1="$S(bLocationNetwork)" arg2="NotRequired"/>
+	<if condition="bLocationNetworkRequired">
+	  <true>
+		<addFeature android:name="android.hardware.location.network" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bLocationNetworkNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.location.network" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bNFCRequired" arg1="$S(bNFC)" arg2="Required"/>
+	<setBoolIsEqual result="bNFCNotRequired" arg1="$S(bNFC)" arg2="NotRequired"/>
+	<if condition="bNFCRequired">
+	  <true>
+		<addFeature android:name="android.hardware.nfc" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bNFCNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.nfc" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bSensorAccelerometerRequired" arg1="$S(bSensorAccelerometer)" arg2="Required"/>
+	<setBoolIsEqual result="bSensorAccelerometerNotRequired" arg1="$S(bSensorAccelerometer)" arg2="NotRequired"/>
+	<if condition="bSensorAccelerometerRequired">
+	  <true>
+		<addFeature android:name="android.hardware.sensor.accelerometer" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bSensorAccelerometerNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.sensor.accelerometer" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bSensorAmbientTemperatureRequired" arg1="$S(bSensorAmbientTemperature)" arg2="Required"/>
+	<setBoolIsEqual result="bSensorAmbientTemperatureNotRequired" arg1="$S(bSensorAmbientTemperature)" arg2="NotRequired"/>
+	<if condition="bSensorAmbientTemperatureRequired">
+	  <true>
+		<addFeature android:name="android.hardware.sensor.ambient_temperature" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bSensorAmbientTemperatureNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.sensor.ambient_temperature" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bSensorBarometerRequired" arg1="$S(bSensorBarometer)" arg2="Required"/>
+	<setBoolIsEqual result="bSensorBarometerNotRequired" arg1="$S(bSensorBarometer)" arg2="NotRequired"/>
+	<if condition="bSensorBarometerRequired">
+	  <true>
+		<addFeature android:name="android.hardware.sensor.barometer" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bSensorBarometerNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.sensor.barometer" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bSensorCompassRequired" arg1="$S(bSensorCompass)" arg2="Required"/>
+	<setBoolIsEqual result="bSensorCompassNotRequired" arg1="$S(bSensorCompass)" arg2="NotRequired"/>
+	<if condition="bSensorCompassRequired">
+	  <true>
+		<addFeature android:name="android.hardware.sensor.compass" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bSensorCompassNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.sensor.compass" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bSensorGyroscopeRequired" arg1="$S(bSensorGyroscope)" arg2="Required"/>
+	<setBoolIsEqual result="bSensorGyroscopeNotRequired" arg1="$S(bSensorGyroscope)" arg2="NotRequired"/>
+	<if condition="bSensorGyroscopeRequired">
+	  <true>
+		<addFeature android:name="android.hardware.sensor.gyroscope" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bSensorGyroscopeNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.sensor.gyroscope" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bSensorHifiRequired" arg1="$S(bSensorHifi)" arg2="Required"/>
+	<setBoolIsEqual result="bSensorHifiNotRequired" arg1="$S(bSensorHifi)" arg2="NotRequired"/>
+	<if condition="bSensorHifiRequired">
+	  <true>
+		<addFeature android:name="android.hardware.sensor.hifi_sensors" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bSensorHifiNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.sensor.hifi_sensors" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bSensorHeartrateRequired" arg1="$S(bSensorHeartrate)" arg2="Required"/>
+	<setBoolIsEqual result="bSensorHeartrateNotRequired" arg1="$S(bSensorHeartrate)" arg2="NotRequired"/>
+	<if condition="bSensorHeartrateRequired">
+	  <true>
+		<addFeature android:name="android.hardware.sensor.heartrate" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bSensorHeartrateNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.sensor.heartrate" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bSensorHeartrateECGRequired" arg1="$S(bSensorHeartrateECG)" arg2="Required"/>
+	<setBoolIsEqual result="bSensorHeartrateECGNotRequired" arg1="$S(bSensorHeartrateECG)" arg2="NotRequired"/>
+	<if condition="bSensorHeartrateECGRequired">
+	  <true>
+		<addFeature android:name="android.hardware.sensor.heartrate.ecg" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bSensorHeartrateECGNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.sensor.heartrate.ecg" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bSensorLightRequired" arg1="$S(bSensorLight)" arg2="Required"/>
+	<setBoolIsEqual result="bSensorLightNotRequired" arg1="$S(bSensorLight)" arg2="NotRequired"/>
+	<if condition="bSensorLightRequired">
+	  <true>
+		<addFeature android:name="android.hardware.sensor.light" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bSensorLightNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.sensor.light" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bSensorProximityRequired" arg1="$S(bSensorProximity)" arg2="Required"/>
+	<setBoolIsEqual result="bSensorProximityNotRequired" arg1="$S(bSensorProximity)" arg2="NotRequired"/>
+	<if condition="bSensorProximityRequired">
+	  <true>
+		<addFeature android:name="android.hardware.sensor.proximity" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bSensorProximityNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.sensor.proximity" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bSensorRelativeHumidityRequired" arg1="$S(bSensorRelativeHumidity)" arg2="Required"/>
+	<setBoolIsEqual result="bSensorRelativeHumidityNotRequired" arg1="$S(bSensorRelativeHumidity)" arg2="NotRequired"/>
+	<if condition="bSensorRelativeHumidityRequired">
+	  <true>
+		<addFeature android:name="android.hardware.sensor.relative_humidity" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bSensorRelativeHumidityNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.sensor.relative_humidity" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bSensorStepCounterRequired" arg1="$S(bSensorStepCounter)" arg2="Required"/>
+	<setBoolIsEqual result="bSensorStepCounterNotRequired" arg1="$S(bSensorStepCounter)" arg2="NotRequired"/>
+	<if condition="bSensorStepCounterRequired">
+	  <true>
+		<addFeature android:name="android.hardware.sensor.stepcounter" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bSensorStepCounterNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.sensor.stepcounter" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bSensorStepDetectorRequired" arg1="$S(bSensorStepDetector)" arg2="Required"/>
+	<setBoolIsEqual result="bSensorStepDetectorNotRequired" arg1="$S(bSensorStepDetector)" arg2="NotRequired"/>
+	<if condition="bSensorStepDetectorRequired">
+	  <true>
+		<addFeature android:name="android.hardware.sensor.stepdetector" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bSensorStepDetectorNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.sensor.stepdetector" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bTelephonyRequired" arg1="$S(bTelephony)" arg2="Required"/>
+	<setBoolIsEqual result="bTelephonyNotRequired" arg1="$S(bTelephony)" arg2="NotRequired"/>
+	<if condition="bTelephonyRequired">
+	  <true>
+		<addFeature android:name="android.hardware.telephony" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bTelephonyNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.telephony" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bTelephonyCDMARequired" arg1="$S(bTelephonyCDMA)" arg2="Required"/>
+	<setBoolIsEqual result="bTelephonyCDMANotRequired" arg1="$S(bTelephonyCDMA)" arg2="NotRequired"/>
+	<if condition="bTelephonyCDMARequired">
+	  <true>
+		<addFeature android:name="android.hardware.telephony.cdma" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bTelephonyCDMANotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.telephony.cdma" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bTelephonyGSMRequired" arg1="$S(bTelephonyGSM)" arg2="Required"/>
+	<setBoolIsEqual result="bTelephonyGSMNotRequired" arg1="$S(bTelephonyGSM)" arg2="NotRequired"/>
+	<if condition="bTelephonyGSMRequired">
+	  <true>
+		<addFeature android:name="android.hardware.telephony.gsm" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bTelephonyGSMNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.telephony.gsm" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bFakeTouchRequired" arg1="$S(bFakeTouch)" arg2="Required"/>
+	<setBoolIsEqual result="bFakeTouchNotRequired" arg1="$S(bFakeTouch)" arg2="NotRequired"/>
+	<if condition="bFakeTouchRequired">
+	  <true>
+		<addFeature android:name="android.hardware.faketouch" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bFakeTouchNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.faketouch" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bFakeTouchMultiTouchDistinctRequired" arg1="$S(bFakeTouchMultiTouchDistinct)" arg2="Required"/>
+	<setBoolIsEqual result="bFakeTouchMultiTouchDistinctNotRequired" arg1="$S(bFakeTouchMultiTouchDistinct)" arg2="NotRequired"/>
+	<if condition="bFakeTouchMultiTouchDistinctRequired">
+	  <true>
+		<addFeature android:name="android.hardware.faketouch.multitouch.distinct" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bFakeTouchMultiTouchDistinctNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.faketouch.multitouch.distinct" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bFakeTouchMultiTouchJazzhandRequired" arg1="$S(bFakeTouchMultiTouchJazzhand)" arg2="Required"/>
+	<setBoolIsEqual result="bFakeTouchMultiTouchJazzhandNotRequired" arg1="$S(bFakeTouchMultiTouchJazzhand)" arg2="NotRequired"/>
+	<if condition="bFakeTouchMultiTouchJazzhandRequired">
+	  <true>
+		<addFeature android:name="android.hardware.faketouch.multitouch.jazzhand" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bFakeTouchMultiTouchJazzhandNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.faketouch.multitouch.jazzhand" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bTouchscreenRequired" arg1="$S(bTouchscreen)" arg2="Required"/>
+	<setBoolIsEqual result="bTouchscreenNotRequired" arg1="$S(bTouchscreen)" arg2="NotRequired"/>
+	<if condition="bTouchscreenRequired">
+	  <true>
+		<addFeature android:name="android.hardware.touchscreen" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bTouchscreenNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.touchscreen" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bTouchscreenMultitouchRequired" arg1="$S(bTouchscreenMultitouch)" arg2="Required"/>
+	<setBoolIsEqual result="bTouchscreenMultitouchNotRequired" arg1="$S(bTouchscreenMultitouch)" arg2="NotRequired"/>
+	<if condition="bTouchscreenMultitouchRequired">
+	  <true>
+		<addFeature android:name="android.hardware.touchscreen.multitouch" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bTouchscreenMultitouchNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.touchscreen.multitouch" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bTouchscreenMultitouchDistinctRequired" arg1="$S(bTouchscreenMultitouchDistinct)" arg2="Required"/>
+	<setBoolIsEqual result="bTouchscreenMultitouchDistinctNotRequired" arg1="$S(bTouchscreenMultitouchDistinct)" arg2="NotRequired"/>
+	<if condition="bTouchscreenMultitouchDistinctRequired">
+	  <true>
+		<addFeature android:name="android.hardware.touchscreen.multitouch.distinct" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bTouchscreenMultitouchDistinctNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.touchscreen.multitouch.distinct" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bTouchscreenMultitouchJazzhandRequired" arg1="$S(bTouchscreenMultitouchJazzhand)" arg2="Required"/>
+	<setBoolIsEqual result="bTouchscreenMultitouchJazzhandNotRequired" arg1="$S(bTouchscreenMultitouchJazzhand)" arg2="NotRequired"/>
+	<if condition="bTouchscreenMultitouchJazzhandRequired">
+	  <true>
+		<addFeature android:name="android.hardware.touchscreen.multitouch.jazzhand" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bTouchscreenMultitouchJazzhandNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.touchscreen.multitouch.jazzhand" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bUSBAccessoryRequired" arg1="$S(bUSBAccessory)" arg2="Required"/>
+	<setBoolIsEqual result="bUSBAccessoryNotRequired" arg1="$S(bUSBAccessory)" arg2="NotRequired"/>
+	<if condition="bUSBAccessoryRequired">
+	  <true>
+		<addFeature android:name="android.hardware.usb.accessory" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bUSBAccessoryNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.usb.accessory" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bUSBHostRequired" arg1="$S(bUSBHost)" arg2="Required"/>
+	<setBoolIsEqual result="bUSBHostNotRequired" arg1="$S(bUSBHost)" arg2="NotRequired"/>
+	<if condition="bUSBHostRequired">
+	  <true>
+		<addFeature android:name="android.hardware.usb.host" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bUSBHostNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.usb.host" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bWiFiRequired" arg1="$S(bWiFi)" arg2="Required"/>
+	<setBoolIsEqual result="bWiFiNotRequired" arg1="$S(bWiFi)" arg2="NotRequired"/>
+	<if condition="bWiFiRequired">
+	  <true>
+		<addFeature android:name="android.hardware.wifi" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bWiFiNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.wifi" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bWiFiDirectRequired" arg1="$S(bWiFiDirect)" arg2="Required"/>
+	<setBoolIsEqual result="bWiFiDirectNotRequired" arg1="$S(bWiFiDirect)" arg2="NotRequired"/>
+	<if condition="bWiFiDirectRequired">
+	  <true>
+		<addFeature android:name="android.hardware.wifi.direct" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bWiFiDirectNotRequired">
+	  <true>
+		<addFeature android:name="android.hardware.wifi.direct" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bSoftwareSipRequired" arg1="$S(bSoftwareSip)" arg2="Required"/>
+	<setBoolIsEqual result="bSoftwareSipNotRequired" arg1="$S(bSoftwareSip)" arg2="NotRequired"/>
+	<if condition="bSoftwareSipRequired">
+	  <true>
+		<addFeature android:name="android.software.sip" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bSoftwareSipNotRequired">
+	  <true>
+		<addFeature android:name="android.software.sip" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bSoftwareSipVoIPRequired" arg1="$S(bSoftwareSipVoIP)" arg2="Required"/>
+	<setBoolIsEqual result="bSoftwareSipVoIPNotRequired" arg1="$S(bSoftwareSipVoIP)" arg2="NotRequired"/>
+	<if condition="bSoftwareSipVoIPRequired">
+	  <true>
+		<addFeature android:name="android.software.sip.voip" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bSoftwareSipVoIPNotRequired">
+	  <true>
+		<addFeature android:name="android.software.sip.voip" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bSoftwareWebviewRequired" arg1="$S(bSoftwareWebview)" arg2="Required"/>
+	<setBoolIsEqual result="bSoftwareWebviewNotRequired" arg1="$S(bSoftwareWebview)" arg2="NotRequired"/>
+	<if condition="bSoftwareWebviewRequired">
+	  <true>
+		<addFeature android:name="android.software.webview" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bSoftwareWebviewNotRequired">
+	  <true>
+		<addFeature android:name="android.software.webview" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bSoftwareInputMethodsRequired" arg1="$S(bSoftwareInputMethods)" arg2="Required"/>
+	<setBoolIsEqual result="bSoftwareInputMethodsNotRequired" arg1="$S(bSoftwareInputMethods)" arg2="NotRequired"/>
+	<if condition="bSoftwareInputMethodsRequired">
+	  <true>
+		<addFeature android:name="android.software.input_methods" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bSoftwareInputMethodsNotRequired">
+	  <true>
+		<addFeature android:name="android.software.input_methods" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bSoftwareBackupRequired" arg1="$S(bSoftwareBackup)" arg2="Required"/>
+	<setBoolIsEqual result="bSoftwareBackupNotRequired" arg1="$S(bSoftwareBackup)" arg2="NotRequired"/>
+	<if condition="bSoftwareBackupRequired">
+	  <true>
+		<addFeature android:name="android.software.backup" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bSoftwareBackupNotRequired">
+	  <true>
+		<addFeature android:name="android.software.backup" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bSoftwareDeviceAdminRequired" arg1="$S(bSoftwareDeviceAdmin)" arg2="Required"/>
+	<setBoolIsEqual result="bSoftwareDeviceAdminNotRequired" arg1="$S(bSoftwareDeviceAdmin)" arg2="NotRequired"/>
+	<if condition="bSoftwareDeviceAdminRequired">
+	  <true>
+		<addFeature android:name="android.software.device_admin" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bSoftwareDeviceAdminNotRequired">
+	  <true>
+		<addFeature android:name="android.software.device_admin" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bSoftwareManagedUsersRequired" arg1="$S(bSoftwareManagedUsers)" arg2="Required"/>
+	<setBoolIsEqual result="bSoftwareManagedUsersNotRequired" arg1="$S(bSoftwareManagedUsers)" arg2="NotRequired"/>
+	<if condition="bSoftwareManagedUsersRequired">
+	  <true>
+		<addFeature android:name="android.software.managed_users" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bSoftwareManagedUsersNotRequired">
+	  <true>
+		<addFeature android:name="android.software.managed_users" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bSoftwareSecurelyRemovesUsersRequired" arg1="$S(bSoftwareSecurelyRemovesUsers)" arg2="Required"/>
+	<setBoolIsEqual result="bSoftwareSecurelyRemovesUsersNotRequired" arg1="$S(bSoftwareSecurelyRemovesUsers)" arg2="NotRequired"/>
+	<if condition="bSoftwareSecurelyRemovesUsersRequired">
+	  <true>
+		<addFeature android:name="android.software.securely_removes_users" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bSoftwareSecurelyRemovesUsersNotRequired">
+	  <true>
+		<addFeature android:name="android.software.securely_removes_users" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bSoftwareVerifiedBootRequired" arg1="$S(bSoftwareVerifiedBoot)" arg2="Required"/>
+	<setBoolIsEqual result="bSoftwareVerifiedBootNotRequired" arg1="$S(bSoftwareVerifiedBoot)" arg2="NotRequired"/>
+	<if condition="bSoftwareVerifiedBootRequired">
+	  <true>
+		<addFeature android:name="android.software.verified_boot" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bSoftwareVerifiedBootNotRequired">
+	  <true>
+		<addFeature android:name="android.software.verified_boot" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bSoftwareMidiRequired" arg1="$S(bSoftwareMidi)" arg2="Required"/>
+	<setBoolIsEqual result="bSoftwareMidiNotRequired" arg1="$S(bSoftwareMidi)" arg2="NotRequired"/>
+	<if condition="bSoftwareMidiRequired">
+	  <true>
+		<addFeature android:name="android.software.midi" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bSoftwareMidiNotRequired">
+	  <true>
+		<addFeature android:name="android.software.midi" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bSoftwarePrintRequired" arg1="$S(bSoftwarePrint)" arg2="Required"/>
+	<setBoolIsEqual result="bSoftwarePrintNotRequired" arg1="$S(bSoftwarePrint)" arg2="NotRequired"/>
+	<if condition="bSoftwarePrintRequired">
+	  <true>
+		<addFeature android:name="android.software.print" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bSoftwarePrintNotRequired">
+	  <true>
+		<addFeature android:name="android.software.print" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bSoftwareLeanbackRequired" arg1="$S(bSoftwareLeanback)" arg2="Required"/>
+	<setBoolIsEqual result="bSoftwareLeanbackNotRequired" arg1="$S(bSoftwareLeanback)" arg2="NotRequired"/>
+	<if condition="bSoftwareLeanbackRequired">
+	  <true>
+		<addFeature android:name="android.software.leanback" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bSoftwareLeanbackNotRequired">
+	  <true>
+		<addFeature android:name="android.software.leanback" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bSoftwareLiveTVRequired" arg1="$S(bSoftwareLiveTV)" arg2="Required"/>
+	<setBoolIsEqual result="bSoftwareLiveTVNotRequired" arg1="$S(bSoftwareLiveTV)" arg2="NotRequired"/>
+	<if condition="bSoftwareLiveTVRequired">
+	  <true>
+		<addFeature android:name="android.software.live_tv" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bSoftwareLiveTVNotRequired">
+	  <true>
+		<addFeature android:name="android.software.live_tv" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bSoftwareAppWidgetsRequired" arg1="$S(bSoftwareAppWidgets)" arg2="Required"/>
+	<setBoolIsEqual result="bSoftwareAppWidgetsNotRequired" arg1="$S(bSoftwareAppWidgets)" arg2="NotRequired"/>
+	<if condition="bSoftwareAppWidgetsRequired">
+	  <true>
+		<addFeature android:name="android.software.app_widgets" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bSoftwareAppWidgetsNotRequired">
+	  <true>
+		<addFeature android:name="android.software.app_widgets" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bSoftwareHomeScreenRequired" arg1="$S(bSoftwareHomeScreen)" arg2="Required"/>
+	<setBoolIsEqual result="bSoftwareHomeScreenNotRequired" arg1="$S(bSoftwareHomeScreen)" arg2="NotRequired"/>
+	<if condition="bSoftwareHomeScreenRequired">
+	  <true>
+		<addFeature android:name="android.software.home_screen" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bSoftwareHomeScreenNotRequired">
+	  <true>
+		<addFeature android:name="android.software.home_screen" android:required="false"/>
+	  </true>
+	</if>
+	<setBoolIsEqual result="bSoftwareLiveWallpaperRequired" arg1="$S(bSoftwareLiveWallpaper)" arg2="Required"/>
+	<setBoolIsEqual result="bSoftwareLiveWallpaperNotRequired" arg1="$S(bSoftwareLiveWallpaper)" arg2="NotRequired"/>
+	<if condition="bSoftwareLiveWallpaperRequired">
+	  <true>
+		<addFeature android:name="android.software.live_wallpaper" android:required="true"/>
+	  </true>
+	</if>
+	<if condition="bSoftwareLiveWallpaperNotRequired">
+	  <true>
+		<addFeature android:name="android.software.live_wallpaper" android:required="false"/>
+	  </true>
+	</if>
+
+
+
+
+  </androidManifestUpdates>
+</root>

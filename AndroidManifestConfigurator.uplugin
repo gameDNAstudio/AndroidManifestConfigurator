@@ -1,0 +1,25 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0",
+  "FriendlyName": "Android Manifest Configurator",
+  "Description": "Advanced configurator for elements and attributes in Android Manifest",
+  "Category": "Misc",
+  "CreatedBy": "gameDNA studio",
+  "CreatedByURL": "http://gamednastudio.com",
+  "DocsURL": "https://github.com/gameDNAstudio/AndroidManifestConfigurator",
+  "MarketplaceURL": "",
+  "EngineVersion": "4.12.0",
+  "SupportURL": "mailto:support@gamednastudio.com",
+  "Modules": [
+    {
+      "Name": "AndroidManifestConfigurator",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+  ],
+  "EnabledByDefault": false,
+  "CanContainContent": false,
+  "IsBetaVersion": false,
+  "Installed": false
+}
