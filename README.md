@@ -8,6 +8,8 @@ The **Android Manifest Configurator** plugin lets you configure AndroidManifest 
 * **Binaries compiled for:** Unreal Engine 4.12.5
 * **Required Unreal Engine 4.12 or above.**
 
+You can package separate versions for different configurations (smaller APK!), for example texture compressions, and *Google Play Store* automatically choose which version should be installed on device.
+
 ## Features
 * Filters for Google Play Store
 * Filters for textures compression
