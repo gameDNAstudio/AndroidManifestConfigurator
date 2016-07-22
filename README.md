@@ -4,7 +4,7 @@
 
 The **Android Manifest Configurator** plugin lets you configure AndroidManifest in your [Unreal Engine 4](http://www.unrealengine.com) project.
 
-* **Current version:** 1.0
+* **Current version:** 1.0.1
 * **Binaries compiled for:** Unreal Engine 4.12.5
 * **Required Unreal Engine 4.12 or above.**
 

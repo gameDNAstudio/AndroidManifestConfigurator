@@ -116,12 +116,15 @@
 	  <true>
 		<addElements tag="manifest">
 			<supports-gl-texture android:name="GL_AMD_compressed_ATC_texture" />
+			<supports-gl-texture android:name="GL_ATI_texture_compression_atitc" />
 		</addElements>
 	  </true>
 	</if>
 	<if condition="bDXTEnabled">
 	  <true>
 		<addElements tag="manifest">
+			<supports-gl-texture android:name="GL_EXT_texture_compression_s3tc" />
+			<supports-gl-texture android:name="GL_NV_texture_compression_s3tc" />
 			<supports-gl-texture android:name="GL_EXT_texture_compression_dxt1" />
 		</addElements>
 	  </true>
@@ -136,7 +139,7 @@
 	<if condition="bASTCEnabled">
 	  <true>
 		<addElements tag="manifest">
-			<supports-gl-texture android:name="GL_OES_texture_compression_ASTC" />
+			<supports-gl-texture android:name="GL_KHR_texture_compression_astc_ldr" />
 		</addElements>
 	  </true>
 	</if>
