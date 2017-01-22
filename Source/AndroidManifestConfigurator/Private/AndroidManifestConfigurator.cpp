@@ -1,6 +1,6 @@
 // Android Manifest Configurator
 // Created by Patryk Stepniewski
-// Copyright (c) 2014-2016 gameDNA studio. All Rights Reserved.
+// Copyright (c) 2014-2017 gameDNA studio. All Rights Reserved.
 
 #include "AndroidManifestConfiguratorPrivatePCH.h"
 #include "AndroidManifestConfiguratorSettings.h"
