@@ -8,7 +8,7 @@
   "CreatedBy": "gameDNA",
   "CreatedByURL": "http://gamednastudio.com",
   "DocsURL": "https://github.com/gameDNAstudio/AndroidManifestConfigurator",
-  "MarketplaceURL": "",
+  "MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/2653efd6ee974c32a66a7d5c7291b71f",
   "EngineVersion": "4.15.0",
   "SupportURL": "mailto:support@gamednastudio.com",
   "Modules": [
