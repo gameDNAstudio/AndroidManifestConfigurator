@@ -2,7 +2,6 @@
 // Created by Patryk Stepniewski
 // Copyright (c) 2014-2017 gameDNA. All Rights Reserved.
 
-#include "AndroidManifestConfiguratorPrivatePCH.h"
 #include "AndroidManifestConfiguratorSettings.h"
 
 UAndroidManifestConfiguratorSettings::UAndroidManifestConfiguratorSettings(const FObjectInitializer& ObjectInitializer)
@@ -13,6 +12,6 @@ UAndroidManifestConfiguratorSettings::UAndroidManifestConfiguratorSettings(const
 	, bXLargeScreens(true)
 	, bAnyDensity(true)
 	, bReqFiveWayNav(false)
-	, bReqHardKeyboard(false)
+	, bReqHardKeyboard(true)
 {
 }

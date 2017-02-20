@@ -2,10 +2,14 @@
 // Created by Patryk Stepniewski
 // Copyright (c) 2014-2017 gameDNA. All Rights Reserved.
 
-#include "AndroidManifestConfiguratorPrivatePCH.h"
+#include "IAndroidManifestConfigurator.h"
+#include "CoreMinimal.h"
+#include "Modules/ModuleManager.h"
+#include "AndroidManifestConfiguratorClasses.h"
 #include "AndroidManifestConfiguratorSettings.h"
 #include "ISettingsModule.h"
 
+DECLARE_LOG_CATEGORY_EXTERN(LogAndroidManifestConfigurator, Log, All);
 DEFINE_LOG_CATEGORY(LogAndroidManifestConfigurator);
 
 #define LOCTEXT_NAMESPACE "AndroidManifestConfigurator"
