@@ -8,8 +8,10 @@ namespace UnrealBuildTool.Rules
 {
 	public class AndroidManifestConfigurator : ModuleRules
 	{
-		public AndroidManifestConfigurator(TargetInfo Target)
+		public AndroidManifestConfigurator(ReadOnlyTargetRules Target) : base(Target)
 		{
+			PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
+
 			Definitions.Add("WITH_ANDROIDMANIFESTCONFIGURATOR=1");
 
 			PrivateIncludePaths.Add("AndroidManifestConfigurator/Private");
