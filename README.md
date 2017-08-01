@@ -4,9 +4,9 @@
 
 **Android Manifest Configurator** lets you configure AndroidManifest in an Unreal Engine 4 project using GUI in Project Settings. You can package separate versions for different configurations (smaller APK) and Google Play will automatically choose which one should be installed on a particular device. Plugin implements filters for texture compression, device screen & input, hardware type, device sensors, and more. More info about Filters on Google Play you can find on [official Android docs](https://developer.android.com/google/play/filters.html).
 
-* **Current version:** 1.4.0
-* **Binaries compiled for:** Unreal Engine 4.16
-* **Required Unreal Engine 4.16 or above.**
+* **Current version:** 1.5.0
+* **Binaries compiled for:** Unreal Engine 4.17
+* **Required Unreal Engine 4.17 or above.**
 
 ## Features
 * Filters for Google Play Store
