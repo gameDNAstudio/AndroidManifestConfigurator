@@ -1,7 +1,7 @@
 {
   "FileVersion": 3,
   "Version": 1,
-  "VersionName": "1.4.0",
+  "VersionName": "1.5.0",
   "FriendlyName": "Android Manifest Configurator",
   "Description": "Advanced configurator for elements and attributes in Android Manifest",
   "Category": "Misc",
@@ -9,7 +9,7 @@
   "CreatedByURL": "http://gamednastudio.com",
   "DocsURL": "https://github.com/gameDNAstudio/AndroidManifestConfigurator",
   "MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/2653efd6ee974c32a66a7d5c7291b71f",
-  "EngineVersion": "4.16.0",
+  "EngineVersion": "4.17.0",
   "SupportURL": "mailto:support@gamednastudio.com",
   "Modules": [
     {
