@@ -1,6 +1,6 @@
 // Android Manifest Configurator
 // Created by Patryk Stepniewski
-// Copyright (c) 2014-2017 gameDNA Ltd. All Rights Reserved.
+// Copyright (c) 2014-2018 gameDNA Ltd. All Rights Reserved.
 
 using System.IO;
 
@@ -12,7 +12,7 @@ namespace UnrealBuildTool.Rules
 		{
 			PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
-			Definitions.Add("WITH_ANDROIDMANIFESTCONFIGURATOR=1");
+			PublicDefinitions.Add("WITH_ANDROIDMANIFESTCONFIGURATOR=1");
 
 			PrivateIncludePaths.Add("AndroidManifestConfigurator/Private");
 
@@ -24,7 +24,7 @@ namespace UnrealBuildTool.Rules
 			{
 				PrivateDependencyModuleNames.AddRange(new string[] { "Launch" });
 				string PluginPath = Utils.MakePathRelativeTo(ModuleDirectory, Target.RelativeEnginePath);
-				AdditionalPropertiesForReceipt.Add(new ReceiptProperty("AndroidPlugin", Path.Combine(PluginPath, "AndroidManifestConfigurator_UPL_Android.xml")));
+				AdditionalPropertiesForReceipt.Add("AndroidPlugin", Path.Combine(PluginPath, "AndroidManifestConfigurator_UPL_Android.xml"));
 			}
 		}
 	}
