@@ -11,8 +11,9 @@ namespace UnrealBuildTool.Rules
 		public AndroidManifestConfigurator(ReadOnlyTargetRules Target) : base(Target)
 		{
 			PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
+            PrecompileForTargets = PrecompileTargetsType.Any;
 
-			PublicDefinitions.Add("WITH_ANDROIDMANIFESTCONFIGURATOR=1");
+            PublicDefinitions.Add("WITH_ANDROIDMANIFESTCONFIGURATOR=1");
 
 			PrivateIncludePaths.Add("AndroidManifestConfigurator/Private");
 
